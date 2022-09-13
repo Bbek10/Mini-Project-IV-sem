@@ -9,12 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@paypal/react-paypal-js": "^7.8.1",
+    "@reduxjs/toolkit": "^1.8.5",
+    "axios": "^0.27.2",
     "bootstrap": "^4.6.0",
+    "mongoose": "^6.6.0",
     "next": "12.1.6",
     "node": "^17.7.2",
     "react": "18.1.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "18.1.0",
+    "react-redux": "^8.0.2",
     "react-slick": "^0.29.0"
   },
   "devDependencies": {
