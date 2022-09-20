@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import "bootstrap/dist/css/bootstrap.css";
 import { Carousel } from "react-bootstrap";
-
 const Featured = () => {
   return (
     <Carousel fade>
@@ -13,8 +12,8 @@ const Featured = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>This is first slide</h3>
+          <p>Our Hospitality</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -25,8 +24,8 @@ const Featured = () => {
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>This is second slide</h3>
+          <p>Our Food Best </p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -37,8 +36,8 @@ const Featured = () => {
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>This s the third slide</p>
+          <h3>This is third slide</h3>
+          <p>You'll be satisfied</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

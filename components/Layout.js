@@ -1,3 +1,4 @@
+import { SSRProvider } from "react-bootstrap";
 import { EndFooter } from "./EndFooter";
 import Footer from "./Footer";
 

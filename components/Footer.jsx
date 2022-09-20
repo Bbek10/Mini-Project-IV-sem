@@ -33,7 +33,7 @@ const Footer = () => {
           </p>
           <p className={styles.text}>
             456 ABCDE Rd #125.
-            <br /> Lalitpur, 85022
+            <br /> , 85022
             <br /> (602) 867-1013
           </p>
         </div>

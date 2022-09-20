@@ -28,8 +28,8 @@ const NavbarComp = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Our Food</Nav.Link>
-            <Nav.Link href="/products/11">Order</Nav.Link>
+            <Nav.Link href="/">Our Food</Nav.Link>
+            <Nav.Link href="/cart">Order</Nav.Link>
             <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -45,7 +45,7 @@ const NavbarComp = () => {
 
           <div className={styles.cart}>
             <Nav>
-              <Nav.Link href="/">Write to us</Nav.Link>
+              <Nav.Link href="/admin/login">Admin page</Nav.Link>
               <Nav.Link eventKey={2} href="/orders/11">
                 Your Order
               </Nav.Link>
