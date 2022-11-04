@@ -4,12 +4,26 @@ import axios from "axios";
 
 const Order = ({ order }) => {
   const status = order.status;
+  const email = order.email;
 
+  const handleClick = async (e) => {
+    alert("An Email has been sent to " + email);
+  };
   const statusClass = (index) => {
     if (index - status < 1) return styles.done;
     if (index - status === 1) return styles.inProgress;
     if (index - status > 1) return styles.undone;
   };
+
+  const moreInfo = () => {
+    alert("An Email has been sent to " + email);
+  };
+
+  const copy = () => {
+    navigator.clipboard.writeText(`http://localhost:3000/orders/${order._id}`);
+    alert("Your order ID has been copied");
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -18,7 +32,10 @@ const Order = ({ order }) => {
             <tr className={styles.trTitle}>
               <th>Order ID</th>
               <th>Customer</th>
+
               <th>Address</th>
+              <th>Phone </th>
+              <th>Email</th>
               <th>Total</th>
             </tr>
             <tr className={styles.tr}>
@@ -32,6 +49,13 @@ const Order = ({ order }) => {
                 <span className={styles.address}>{order.address}</span>
               </td>
               <td>
+                <span className={styles.address}>{order.phone}</span>
+              </td>
+              <td>
+                <span className={styles.address}>{order.email}</span>
+              </td>
+
+              <td>
                 <span className={styles.total}>Rs. {order.total}</span>
               </td>
             </tr>
@@ -40,7 +64,10 @@ const Order = ({ order }) => {
         <div className={styles.row}>
           <div className={statusClass(0)}>
             <Image src="/img/paid.png" width={30} height={30} alt="" />
-            <span>Payment</span>
+            <span>
+              Payment <br />
+              (COD)
+            </span>
             <div className={styles.checkedIcon}>
               <Image
                 className={styles.checkedIcon}
@@ -92,6 +119,7 @@ const Order = ({ order }) => {
           </div>
         </div>
       </div>
+
       <div className={styles.right}>
         <div className={styles.wrapper}>
           <h2 className={styles.title}>CART TOTAL</h2>
@@ -104,8 +132,14 @@ const Order = ({ order }) => {
           <div className={styles.totalText}>
             <b className={styles.totalTextTitle}>Total:</b>Rs. {order.total}
           </div>
-          <button disabled className={styles.button}>
-            PAID
+          <button className={styles.button}>PAID</button>
+
+          <button onClick={handleClick} className={styles.buttonEmail}>
+            Send detailed info to {order.email}
+          </button>
+
+          <button onClick={copy} className={styles.buttonEmail}>
+            Copy your order ID {order._id}
           </button>
         </div>
       </div>

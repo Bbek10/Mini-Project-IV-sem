@@ -1,9 +1,10 @@
 .container {
   height: calc(100vh - 100px);
-  background: linear-gradient(90deg, rgb(110, 94, 254) 0%, rgba(73, 63, 252, 1) 100%);
-  ;
+  background: white;
   overflow: hidden;
   position: relative;
+  width: 100%;
+
 }
 
 .arrowContainer {
@@ -37,6 +38,6 @@
 
 @media screen and (max-width: 480px) {
   .container {
-    height: 50vh;
+    height: 40vh;
   }
 }

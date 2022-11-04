@@ -56,9 +56,16 @@
 
 .listItem {
   margin: 20px;
+  margin-top: 40px;
   font-weight: 500;
+  cursor: pointer;
+
 }
 
+.listItem:hover {
+  color: tomato;
+
+}
 
 
 .cart {
@@ -78,7 +85,7 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  background: linear-gradient(90deg, rgb(110, 94, 254) 0%, rgba(73, 63, 252, 1) 100%);
+  background: white;
 
 }
 

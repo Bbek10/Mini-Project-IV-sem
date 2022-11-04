@@ -4,6 +4,7 @@ import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import { useSelector } from "react-redux";
 import Link from "next/link";
+import DigitalClock from "./DigitalClock";
 const NavbarComp = () => {
   const quantity = useSelector((state) => state.cart.quantity);
   return (
@@ -14,41 +15,46 @@ const NavbarComp = () => {
       bg="dark"
       variant="dark"
     >
-      <Container>
-        <Navbar.Brand href="/">
-          <div>
-            <img
-              src="/img/telephone.png"
-              alt=""
-              className={styles.callButton}
-            />
-            CALL US 0123456
-          </div>
+      <Container className={styles.container}>
+        <Navbar.Brand>
+          <Link href="/" passHref>
+            <div>
+              <img
+                src="/img/telephone.png"
+                alt=""
+                className={styles.callButton}
+              />
+              CALL US 0123456
+            </div>
+          </Link>
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/">Our Food</Nav.Link>
-            <Nav.Link href="/cart">Order</Nav.Link>
-            <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+          <Nav>
+            <ul className={styles.list}>
+              <Link href="/">
+                <li className={styles.listItem}>Our Food</li>
+              </Link>
+              <Link href="/cart">
+                <li className={styles.listItem}>Your Cart</li>
+              </Link>
+              <Link href="/contactUs">
+                <li className={styles.listItem}>Contact Us</li>
+              </Link>
+              <Link href="/">
+                <li className={styles.listItem}>
+                  <DigitalClock />
+                </li>
+              </Link>
+            </ul>
           </Nav>
 
           <div className={styles.cart}>
             <Nav>
-              <Nav.Link href="/admin/login">Admin page</Nav.Link>
-              <Nav.Link eventKey={2} href="/orders/11">
-                Your Order
-              </Nav.Link>
+              <div className={styles.texts}>
+                <Link href="/admin/login">Admin page</Link>
+              </div>
             </Nav>
           </div>
 

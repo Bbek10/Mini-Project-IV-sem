@@ -36,6 +36,7 @@ const Product = ({ pizza }) => {
 
   const handleClick = () => {
     dispatch(addProduct({ ...pizza, extras, price, quantity }));
+    alert("Your item has been added to the cart ");
   };
 
   return (
@@ -49,7 +50,7 @@ const Product = ({ pizza }) => {
         <h1 className={styles.title}>{pizza.title}</h1>
         <span className={styles.price}>Rs.{price}</span>
         <p className={styles.desc}>{pizza.desc}</p>
-        <h3 className={styles.choose}>Choose the size</h3>
+        <h3 className={styles.choose}>Choose the size (only for pizzas)</h3>
         <div className={styles.sizes}>
           <div className={styles.size} onClick={() => handleSize(0)}>
             <Image src="/img/size.png" layout="fill" alt="" />

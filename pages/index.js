@@ -6,8 +6,8 @@ import ProductList from "../components/ProductList";
 import styles from "../styles/Home.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-import AddButton from "../components/AddButton";
 import { useState } from "react";
+import AddButton from "../components/AddButton";
 import Add from "../components/Add";
 
 export default function Home({ pizzaList, admin }) {

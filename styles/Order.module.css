@@ -14,7 +14,7 @@
 }
 
 .row {
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
 }
@@ -69,7 +69,7 @@
 
 .wrapper {
     width: 90%;
-    max-height: 300px;
+    max-height: 350px;
     background-color: #333;
     padding: 50px;
     padding-top: 10px;
@@ -87,6 +87,15 @@
     background-color: white;
     height: 30px;
     color: teal;
+    font-weight: bold;
+    cursor: not-allowed;
+    margin-top: 20px;
+}
+
+.buttonEmail {
+    background-color: white;
+    height: 50px;
+    color: tomato;
     font-weight: bold;
     cursor: not-allowed;
     margin-top: 20px;
